@@ -86,3 +86,25 @@ def model_train(epoch,n):
     for i, ax in enumerate(axis.flat):
       ax.imshow(X_test__[i], cmap='binary')
       ax.set(title = f"Real Number is {y_test[i].argmax()}\nPredict Number is {y_pred[i].argmax()}");
+        
+        
+no_epoch=10
+no_layer=1
+accuracy_train_model=model_train(no_epoch,no_layer)
+
+
+def plotgraph(no_of_epochs, acc, val_acc):
+    # Plot training & validation accuracy values
+    plt.plot(no_of_epochs, acc, 'b')
+    plt.plot(no_of_epochs, val_acc, 'r')
+    plt.title('Model accuracy')
+    plt.ylabel('Accuracy')
+    plt.xlabel('Epoch')
+    plt.legend(['Train', 'Val'], loc='upper left')
+    plt.show()
+    
+# Accuracy curve
+plotgraph(no_of_epochs,acc,val_acc)
+
+# loss curve
+plotgraph(no_of_epochs, loss, val_loss)
