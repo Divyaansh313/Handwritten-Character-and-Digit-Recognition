@@ -46,3 +46,5 @@ To develop a machine learning model:
 5. Evaluate the model
 6. Output
 
+## Flowchart
+![FLOWCHART] (https://github.com/Divyaansh313/Handwritten-Character-and-Digit-Recognition/blob/master/Images/Flowchart.png)
